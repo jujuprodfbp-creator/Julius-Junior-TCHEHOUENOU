@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 import { BlogPostClient } from '@/app/components/BlogPostClient';
 import { notFound } from 'next/navigation';
@@ -19,6 +20,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  setRequestLocale(params.locale);
   const post = await getPostBySlug(params.slug, params.locale);
   if (!post) notFound();
   return <BlogPostClient post={post} />;

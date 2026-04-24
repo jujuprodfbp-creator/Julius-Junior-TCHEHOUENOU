@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { getAllPosts } from '@/lib/blog';
 import { BlogListClient } from '@/app/components/BlogListClient';
 import type { Metadata } from 'next';
@@ -12,6 +13,7 @@ interface BlogPageProps {
 }
 
 export default function BlogPage({ params: { locale } }: BlogPageProps) {
+  setRequestLocale(locale);
   const posts = getAllPosts(locale);
   return <BlogListClient posts={posts} />;
 }

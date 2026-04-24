@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Download, GraduationCap, Briefcase, Code, Languages } from 'lucide-react';
 import Image from 'next/image';
 
+export const dynamic = 'force-dynamic';
+
 export default function CVPage() {
   const t = useTranslations('cv');
 

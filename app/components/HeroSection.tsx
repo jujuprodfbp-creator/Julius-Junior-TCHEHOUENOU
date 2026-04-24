@@ -135,7 +135,7 @@ export function HeroSection() {
                     priority
                     onLoad={() => {
                       // Hide fallback initials when image loads
-                      const initials = document.querySelector('.profile-initials');
+                      const initials = document.querySelector('.profile-initials') as HTMLElement;
                       if (initials) initials.style.display = 'none';
                     }}
                   />
