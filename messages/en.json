@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "cv": "Resume",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Julius Junior",
+    "role": "Full Stack Developer",
+    "status": "Computer Science Student · IUT of Parakou",
+    "bio": "Passionate about web development and emerging technologies, I design modern, high-performance, and accessible applications. Finishing my degree at the IUT of the University of Parakou, I combine academic rigor with hands-on practice to craft memorable digital experiences.",
+    "cta_projects": "View my projects",
+    "cta_cv": "Download my CV",
+    "scroll": "Scroll down",
+    "skills_title": "Skills",
+    "stats_projects": "Projects",
+    "stats_months": "Months of experience",
+    "stats_tech": "Technologies"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "A selection of my recent work",
+    "github": "Source code",
+    "live": "Live site",
+    "online": "Online",
+    "filter_all": "All",
+    "no_projects": "No projects found"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts, tutorials and knowledge sharing",
+    "read_more": "Read article",
+    "min_read": "min read",
+    "back": "Back to blog"
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "subtitle": "My academic and professional background",
+    "download": "Download PDF",
+    "profile": "Profile",
+    "profile_desc": "Passionate Full Stack Developer with a strong background in management information systems. Specialized in modern technologies like Next.js, React, and Node.js, I strive to create high-performance and accessible web applications. My approach combines technical rigor and creativity to deliver innovative solutions that meet user needs.",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills",
+    "languages": "Languages",
+    "interests": "Interests",
+    "interests_list": ["Open source development", "Reading tech blogs", "Video games", "Sports (football)", "Travel and cultural discoveries"]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Have a project idea? Let's talk!",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "An error occurred. Please try again.",
+    "name_placeholder": "John Doe",
+    "email_placeholder": "john@example.com",
+    "message_placeholder": "Describe your project or question...",
+    "or": "Or contact me directly"
+  },
+  "footer": {
+    "made_with": "Made with ❤️ by",
+    "rights": "All rights reserved"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "locale": {
+    "switch": "FR"
+  }
+}

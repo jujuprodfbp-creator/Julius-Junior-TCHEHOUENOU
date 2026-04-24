@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "blog": "Blog",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Bonjour, je suis",
+    "name": "Julius Junior",
+    "role": "Développeur Full Stack",
+    "status": "Étudiant en Informatique de Gestion · IUT de Parakou",
+    "bio": "Passionné par le développement web et les nouvelles technologies, je conçois des applications modernes, performantes et accessibles. En fin de formation à l'IUT de l'Université de Parakou, je combine rigueur académique et pratique concrète pour créer des expériences numériques mémorables.",
+    "cta_projects": "Voir mes projets",
+    "cta_cv": "Télécharger mon CV",
+    "scroll": "Défiler vers le bas",
+    "skills_title": "Compétences",
+    "stats_projects": "Projets",
+    "stats_months": "Mois d'expérience",
+    "stats_tech": "Technologies"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Une sélection de mes réalisations récentes",
+    "github": "Code source",
+    "live": "Voir le site",
+    "online": "En ligne",
+    "filter_all": "Tous",
+    "no_projects": "Aucun projet trouvé"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Réflexions, tutoriels et partage de connaissances",
+    "read_more": "Lire l'article",
+    "min_read": "min de lecture",
+    "back": "Retour au blog"
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "subtitle": "Mon parcours académique et professionnel",
+    "download": "Télécharger le PDF",
+    "profile": "Profil",
+    "profile_desc": "Développeur Full Stack passionné avec une solide formation en informatique de gestion. Spécialisé dans les technologies modernes comme Next.js, React et Node.js, je m'efforce de créer des applications web performantes et accessibles. Mon approche combine rigueur technique et créativité pour livrer des solutions innovantes répondant aux besoins des utilisateurs.",
+    "education": "Formation",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "languages": "Langues",
+    "interests": "Centres d'intérêt",
+    "interests_list": ["Développement open source", "Lecture de blogs tech", "Jeux vidéo", "Sport (football)", "Voyages et découvertes culturelles"]
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "subtitle": "Une idée de projet ? Parlons-en !",
+    "name": "Votre nom",
+    "email": "Votre email",
+    "message": "Votre message",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès ! Je vous répondrai bientôt.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "name_placeholder": "Jean Dupont",
+    "email_placeholder": "jean@exemple.com",
+    "message_placeholder": "Décrivez votre projet ou votre question...",
+    "or": "Ou contactez-moi directement"
+  },
+  "footer": {
+    "made_with": "Fait avec ❤️ par",
+    "rights": "Tous droits réservés"
+  },
+  "theme": {
+    "toggle": "Changer le thème"
+  },
+  "locale": {
+    "switch": "EN"
+  }
+}
