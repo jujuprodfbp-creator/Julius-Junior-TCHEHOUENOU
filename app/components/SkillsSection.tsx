@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 
 const skillGroups = [
   {
@@ -36,26 +35,17 @@ export function SkillsSection() {
   return (
     <section className="py-24 relative">
       <div className="section-container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
-        >
+        <div className="mb-16 text-center fade-up" style={{ animationDelay: '0.1s' }}>
           <h2 className="section-title">{t('skills_title')}</h2>
           <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-accent-500 rounded-full mx-auto" />
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillGroups.map((group, groupIdx) => (
-            <motion.div
+            <div
               key={group.category}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: groupIdx * 0.1 }}
-              className="glass rounded-2xl p-6"
+              className="glass rounded-2xl p-6 fade-up"
+              style={{ animationDelay: `${0.15 + groupIdx * 0.05}s` }}
             >
               <h3 className="font-display text-lg text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-brand-500" />
@@ -69,18 +59,15 @@ export function SkillsSection() {
                       <span className="text-xs font-mono text-zinc-400 dark:text-zinc-500">{skill.level}%</span>
                     </div>
                     <div className="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-brand-500 to-accent-500 rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: groupIdx * 0.1 + idx * 0.08, ease: 'easeOut' }}
+                      <div
+                        className="progress-fill h-full bg-gradient-to-r from-brand-500 to-accent-500 rounded-full"
+                        style={{ '--target-width': `${skill.level}%` } as React.CSSProperties}
                       />
                     </div>
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

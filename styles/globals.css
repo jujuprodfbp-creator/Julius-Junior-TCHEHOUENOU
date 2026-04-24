@@ -109,6 +109,41 @@
     z-index: 0;
     opacity: 0.4;
   }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeUp 0.7s ease-out forwards;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.7s ease-out forwards;
+  }
+
+  .progress-fill {
+    width: 0;
+    animation: progressGrow 1s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes progressGrow {
+    to {
+      width: var(--target-width, 100%);
+    }
+  }
 }
 
 /* Prose styles for blog */
