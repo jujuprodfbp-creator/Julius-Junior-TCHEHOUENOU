@@ -1,7 +1,6 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
-import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { Github, Linkedin, Instagram, Facebook, Mail, Phone } from 'lucide-react';
 import { Link } from '@/i18n';
 
@@ -31,7 +30,6 @@ const socialLinks = [
 export function Footer() {
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
-  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -97,19 +95,17 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-3">
               {socialLinks.map(({ href, label, icon: Icon }) => (
-                <motion.a
+                <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  whileHover={{ scale: 1.15, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
                   className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400
                              hover:bg-brand-500 hover:text-white transition-colors duration-200"
                 >
                   <Icon size={16} />
-                </motion.a>
+                </a>
               ))}
             </div>
           </div>

@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Menu, X, Code2 } from 'lucide-react';
 import { Link } from '@/i18n';
 import { locales } from '@/i18n';
@@ -15,7 +14,7 @@ export function Navbar() {
   const tTheme = useTranslations('theme');
   const tLocale = useTranslations('locale');
   const locale = useLocale();
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -52,10 +51,7 @@ export function Navbar() {
   };
 
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+    <header
       className={clsx(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
@@ -109,24 +105,14 @@ export function Navbar() {
             {/* Theme toggle */}
             {mounted && (
               <button
-                onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-                className="p-2 rounded-lg text-zinc-600 dark:text-zinc-400
-                           hover:bg-zinc-100 dark:hover:bg-zinc-800
-                           hover:text-zinc-900 dark:hover:text-white transition-all duration-200"
-                aria-label={tTheme('toggle')}
-              >
-                <AnimatePresence mode="wait" initial={false}>
-                  <motion.div
-                    key={resolvedTheme}
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {resolvedTheme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-                  </motion.div>
-                </AnimatePresence>
-              </button>
+              onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+              className="p-2 rounded-lg text-zinc-600 dark:text-zinc-400
+                         hover:bg-zinc-100 dark:hover:bg-zinc-800
+                         hover:text-zinc-900 dark:hover:text-white transition-all duration-200"
+              aria-label={tTheme('toggle')}
+            >
+              {resolvedTheme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             )}
 
             {/* Mobile menu toggle */}
@@ -142,16 +128,9 @@ export function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        <AnimatePresence>
-          {mobileOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2 }}
-              className="md:hidden overflow-hidden"
-            >
-              <div className="pb-4 flex flex-col gap-1">
+        {mobileOpen && (
+          <div className="md:hidden overflow-hidden transition-all duration-200">
+            <div className="pb-4 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -168,10 +147,9 @@ export function Navbar() {
                   </Link>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </nav>
-    </motion.header>
+    </header>
   );
 }
