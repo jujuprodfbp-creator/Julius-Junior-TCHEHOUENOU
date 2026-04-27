@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { Link } from '@/i18n';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import type { BlogPost } from '@/lib/blog';
@@ -16,12 +15,7 @@ export function BlogPostClient({ post }: BlogPostClientProps) {
   return (
     <article className="section-container max-w-3xl mx-auto">
       {/* Back button */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.4 }}
-        className="mb-10"
-      >
+      <div className="mb-10 fade-up">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400
@@ -29,15 +23,10 @@ export function BlogPostClient({ post }: BlogPostClientProps) {
         >
           <ArrowLeft size={16} /> {t('back')}
         </Link>
-      </motion.div>
+      </div>
 
       {/* Header */}
-      <motion.header
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mb-10"
-      >
+      <header className="mb-10 fade-up" style={{ animationDelay: '0.1s' }}>
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {post.tags.map((tag) => (
@@ -61,14 +50,12 @@ export function BlogPostClient({ post }: BlogPostClientProps) {
             {post.readTime} {t('min_read')}
           </span>
         </div>
-      </motion.header>
+      </header>
 
       {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="prose-custom"
+      <div
+        className="prose-custom fade-up"
+        style={{ animationDelay: '0.2s' }}
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </article>

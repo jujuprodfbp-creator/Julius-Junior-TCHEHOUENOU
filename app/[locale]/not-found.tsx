@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Link } from '@/i18n';
 import { Home, ArrowLeft } from 'lucide-react';
 
@@ -8,11 +7,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center px-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="fade-up">
           <p className="text-8xl font-display font-bold gradient-text mb-4">404</p>
           <h1 className="text-2xl font-display text-zinc-900 dark:text-white mb-4">
             Page introuvable
@@ -28,7 +23,7 @@ export default function NotFound() {
               <ArrowLeft size={16} /> Retour
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

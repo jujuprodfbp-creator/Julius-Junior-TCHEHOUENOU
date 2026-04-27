@@ -23,9 +23,14 @@ export function ContactClient() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID?.trim();
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID?.trim();
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY?.trim();
+  const missingConfig = [
+    !serviceId && 'NEXT_PUBLIC_EMAILJS_SERVICE_ID',
+    !templateId && 'NEXT_PUBLIC_EMAILJS_TEMPLATE_ID',
+    !publicKey && 'NEXT_PUBLIC_EMAILJS_PUBLIC_KEY',
+  ].filter(Boolean) as string[];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -41,9 +46,9 @@ export function ContactClient() {
       return;
     }
 
-    if (!serviceId || !templateId || !publicKey) {
+    if (missingConfig.length > 0) {
       setErrorMessage(
-        'Le formulaire de contact n’est pas configuré correctement. Vérifiez vos clés EmailJS.'
+        `Le formulaire de contact n’est pas configuré correctement. Variables manquantes: ${missingConfig.join(', ')}.`
       );
       setFormState('error');
       return;

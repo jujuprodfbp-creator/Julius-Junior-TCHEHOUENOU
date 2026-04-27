@@ -1,26 +1,21 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { Download, GraduationCap, Briefcase, Code, Languages } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function CVPage() {
   const t = useTranslations('cv');
+  const interests = t.raw('interests_list') as string[];
 
   return (
     <section className="section-container">
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-12"
-      >
+      <div className="text-center mb-12 fade-up">
         <h1 className="section-title">{t('title')}</h1>
         <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-6">{t('subtitle')}</p>
         <a
-          href="/cv.pdf"
+          href="/images/cv.pdf"
           download="CV_Julius_Junior_Tchehouenou.pdf"
           className="btn-primary inline-flex"
         >
@@ -28,12 +23,10 @@ export default function CVPage() {
           {t('download')}
         </a>
         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-accent-500 rounded-full mx-auto mt-6" />
-      </motion.div>
+      </div>
 
       <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left column */}
-        <div className="lg:col-span-1 space-y-6">
-          {/* Identity */}
+        <div className="space-y-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -50,17 +43,20 @@ export default function CVPage() {
               />
             </div>
             <h2 className="font-display text-lg text-zinc-900 dark:text-white mb-1">
-              Julius Junior<br />Tchehouenou
+              Julius Junior
+              <br />
+              Tchehouenou
             </h2>
-            <p className="text-sm text-brand-600 dark:text-brand-400 font-medium mb-3">Développeur Full Stack</p>
+            <p className="text-sm text-brand-600 dark:text-brand-400 font-medium mb-3">
+              Developpeur Full Stack
+            </p>
             <div className="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
-              <p>📧 julius.tchehouenou@gmail.com</p>
-              <p>📱 +229 01 61 13 32 24</p>
-              <p>📍 Parakou, Bénin 🇧🇯</p>
+              <p>julius.tchehouenou@gmail.com</p>
+              <p>+229 01 61 13 32 24</p>
+              <p>Parakou, Benin</p>
             </div>
           </motion.div>
 
-          {/* Skills */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -71,12 +67,15 @@ export default function CVPage() {
               <Code size={16} className="text-brand-500" />
               {t('skills')}
             </h3>
-            {['Next.js', 'React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'PostgreSQL', 'MongoDB', 'Git', 'Django'].map((skill) => (
-              <span key={skill} className="tech-badge mr-1.5 mb-1.5 inline-block">{skill}</span>
-            ))}
+            {['Next.js', 'React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'PostgreSQL', 'MongoDB', 'Git', 'Django'].map(
+              (skill) => (
+                <span key={skill} className="tech-badge mr-1.5 mb-1.5 inline-block">
+                  {skill}
+                </span>
+              )
+            )}
           </motion.div>
 
-          {/* Languages */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -88,37 +87,39 @@ export default function CVPage() {
               {t('languages')}
             </h3>
             {[
-              { lang: 'Français', level: 'Natif' },
-              { lang: 'Anglais', level: 'Intermédiaire' },
+              { lang: 'Francais', level: 'Natif' },
+              { lang: 'Anglais', level: 'Intermediaire' },
             ].map(({ lang, level }) => (
-              <div key={lang} className="flex justify-between items-center py-1.5 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
+              <div
+                key={lang}
+                className="flex justify-between items-center py-1.5 border-b border-zinc-100 dark:border-zinc-800 last:border-0"
+              >
                 <span className="text-sm text-zinc-700 dark:text-zinc-300">{lang}</span>
                 <span className="text-xs font-mono text-zinc-400">{level}</span>
               </div>
             ))}
           </motion.div>
 
-          {/* Interests */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
             className="glass rounded-2xl p-6"
           >
-            <h3 className="font-display text-base text-zinc-900 dark:text-white mb-4">{t('interests')}</h3>
+            <h3 className="font-display text-base text-zinc-900 dark:text-white mb-4">
+              {t('interests')}
+            </h3>
             <div className="space-y-2">
-              <div className="text-sm text-zinc-600 dark:text-zinc-300">• Développement open source</div>
-              <div className="text-sm text-zinc-600 dark:text-zinc-300">• Lecture de blogs tech</div>
-              <div className="text-sm text-zinc-600 dark:text-zinc-300">• Jeux vidéo</div>
-              <div className="text-sm text-zinc-600 dark:text-zinc-300">• Sport (football)</div>
-              <div className="text-sm text-zinc-600 dark:text-zinc-300">• Voyages et découvertes culturelles</div>
+              {interests.map((interest) => (
+                <div key={interest} className="text-sm text-zinc-600 dark:text-zinc-300">
+                  • {interest}
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
 
-        {/* Right column */}
         <div className="lg:col-span-2 space-y-8">
-          {/* Profile */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -131,7 +132,6 @@ export default function CVPage() {
             </p>
           </motion.div>
 
-          {/* Education */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -146,15 +146,15 @@ export default function CVPage() {
               {[
                 {
                   degree: 'Licence en Informatique de Gestion',
-                  school: 'IUT · Université de Parakou',
-                  period: '2026 – En cours',
-                  desc: 'Formation spécialisée en développement web, bases de données, réseaux et gestion de systèmes d\'information.',
+                  school: 'IUT · Universite de Parakou',
+                  period: '2026 - En cours',
+                  desc: "Formation specialisee en developpement web, bases de donnees, reseaux et gestion de systemes d'information.",
                 },
                 {
-                  degree: 'Baccalauréat Série D',
+                  degree: 'Baccalaureat Serie D',
                   school: 'CEG1-Lokossa',
                   period: '2023',
-                  desc: 'Baccalauréat scientifique mention Bien.',
+                  desc: 'Baccalaureat scientifique mention Bien.',
                 },
               ].map((edu) => (
                 <div key={edu.degree} className="relative">
@@ -170,7 +170,6 @@ export default function CVPage() {
             </div>
           </motion.div>
 
-          {/* Experience */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -184,16 +183,16 @@ export default function CVPage() {
             <div className="relative pl-4 border-l-2 border-accent-200 dark:border-accent-800 space-y-6">
               {[
                 {
-                  role: 'Développeur Web Full Stack (Freelance)',
+                  role: 'Developpeur Web Full Stack (Freelance)',
                   company: 'Projets Personnels & Clients',
-                  period: '2023 – Présent',
-                  desc: 'Conception et développement d\'applications web complètes. Stack principale : Next.js, TypeScript, Node.js, PostgreSQL.',
+                  period: '2023 - Present',
+                  desc: "Conception et developpement d'applications web completes. Stack principale : Next.js, TypeScript, Node.js, PostgreSQL.",
                 },
                 {
-                  role: 'Stage en Développement Web',
+                  role: 'Stage en Developpement Web',
                   company: 'Entreprise locale · Parakou',
-                  period: 'Été 2023',
-                  desc: 'Intégration de maquettes Figma, développement de fonctionnalités front-end avec React. Collaboration en équipe Agile.',
+                  period: 'Ete 2023',
+                  desc: 'Integration de maquettes Figma, developpement de fonctionnalites front-end avec React. Collaboration en equipe Agile.',
                 },
               ].map((xp) => (
                 <div key={xp.role} className="relative">

@@ -63,7 +63,7 @@ export function HeroSection() {
           <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
             <div className="fade-up inline-flex items-center gap-2 mb-6" style={{ animationDelay: '0.1s' }}>
               <span className="flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75" />
+                <span className="absolute inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
               </span>
               <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800/80 px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-700">
@@ -116,9 +116,9 @@ export function HeroSection() {
           </div>
 
           <div className="flex-shrink-0 order-1 lg:order-2 fade-up" style={{ animationDelay: '0.2s' }}>
-            <div className="relative animate-float">
+            <div className="relative">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-brand-400 via-accent-500 to-brand-600 blur-md opacity-40 scale-105" />
-              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full p-1 bg-gradient-to-br from-brand-400 to-accent-600 animate-glow">
+              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full p-1 bg-gradient-to-br from-brand-400 to-accent-600">
                 <div className="w-full h-full rounded-full overflow-hidden bg-zinc-200 dark:bg-zinc-800">
                   <Image
                     src="/images/profile.jpg"
@@ -161,7 +161,7 @@ export function HeroSection() {
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 fade-in" style={{ animationDelay: '0.8s' }}>
         <span className="text-xs text-zinc-400 font-mono">{t('scroll')}</span>
-        <div className="animate-bounce">
+        <div>
           <ArrowDown size={16} className="text-zinc-400" />
         </div>
       </div>

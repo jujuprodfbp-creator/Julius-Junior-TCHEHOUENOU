@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { Link } from '@/i18n';
 import { Calendar, Clock, Tag, ArrowRight } from 'lucide-react';
 import type { BlogPost } from '@/lib/blog';
@@ -15,28 +14,21 @@ export function BlogListClient({ posts }: BlogListClientProps) {
 
   return (
     <section className="section-container">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-12"
-      >
+      <div className="text-center mb-12 fade-up">
         <h1 className="section-title">{t('title')}</h1>
         <p className="text-zinc-500 dark:text-zinc-400 text-lg">{t('subtitle')}</p>
         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-accent-500 rounded-full mx-auto mt-4" />
-      </motion.div>
+      </div>
 
       {posts.length === 0 ? (
         <p className="text-center text-zinc-400 py-20">Aucun article disponible.</p>
       ) : (
         <div className="grid gap-8 max-w-3xl mx-auto">
           {posts.map((post, idx) => (
-            <motion.article
+            <article
               key={post.slug}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group glass rounded-2xl p-6 md:p-8 hover:shadow-xl hover:shadow-brand-500/10 transition-all duration-300 hover:-translate-y-1"
+              className="group glass rounded-2xl p-6 md:p-8 hover:shadow-xl hover:shadow-brand-500/10 transition-all duration-300 hover:-translate-y-1 fade-up"
+              style={{ animationDelay: `${idx * 0.1}s` }}
             >
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
@@ -83,7 +75,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                   {t('read_more')} <ArrowRight size={14} />
                 </Link>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
       )}
