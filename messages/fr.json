@@ -9,9 +9,9 @@
   "home": {
     "greeting": "Bonjour, je suis",
     "name": "Julius Junior",
-    "role": "Développeur Full Stack",
-    "status": "Étudiant en Informatique de Gestion · IUT de Parakou",
-    "bio": "Passionné par le développement web et les nouvelles technologies, je conçois des applications modernes, performantes et accessibles. En fin de formation à l'IUT de l'Université de Parakou, je combine rigueur académique et pratique concrète pour créer des expériences numériques mémorables.",
+    "role": "Assistant Chef de Projet Informatique",
+    "status": "Licence Pro Informatique de Gestion (Mention Très Bien) · Stagiaire à l'Université de Parakou",
+    "bio": "Développeur Full Stack doté d'une double compétence technique et organisationnelle, acquise en assurant simultanément les rôles d'analyste-programmeur et de coordinateur sur mes projets académiques et professionnels. J'analyse les besoins, planifie les tâches et communique avec des équipes pluridisciplinaires pour tenir les délais, avec pour objectif de mettre cette double expertise au service du pilotage de projets numériques.",
     "cta_projects": "Voir mes projets",
     "cta_cv": "Télécharger mon CV",
     "scroll": "Défiler vers le bas",
@@ -42,12 +42,48 @@
     "download": "Télécharger le PDF",
     "download_ats": "Version ATS (sans photo)",
     "download_photo": "Version avec photo",
+    "role": "Assistant Chef de Projet Informatique",
     "profile": "Profil",
-    "profile_desc": "Développeur Full Stack passionné avec une solide formation en informatique de gestion. Spécialisé dans les technologies modernes comme Next.js, React et Node.js, je m'efforce de créer des applications web performantes et accessibles. Mon approche combine rigueur technique et créativité pour livrer des solutions innovantes répondant aux besoins des utilisateurs.",
+    "profile_desc": "Développeur Full Stack junior (Mention Très Bien) doté d'une double compétence technique et organisationnelle, acquise en assurant simultanément les rôles d'analyste-programmeur et de coordinateur sur mes projets académiques et professionnels. Habitué à analyser des besoins, planifier des tâches, documenter les livrables et communiquer avec des équipes pluridisciplinaires pour tenir les délais. Je vise un poste d'Assistant Chef de Projet Informatique afin de mettre cette double expertise — développement et coordination — au service du pilotage de projets numériques.",
     "education": "Formation",
+    "education_list": [
+      {
+        "degree": "Licence Professionnelle en Informatique de Gestion — Mention Très Bien",
+        "school": "Institut Universitaire de Technologie (IUT) · Université de Parakou",
+        "period": "2023 – 2026",
+        "desc": "Formation spécialisée en développement web, bases de données, réseaux et gestion de systèmes d'information."
+      },
+      {
+        "degree": "Baccalauréat, Série D",
+        "school": "CEG1 Lokossa",
+        "period": "2023",
+        "desc": "Baccalauréat scientifique."
+      }
+    ],
     "experience": "Expérience",
+    "experience_list": [
+      {
+        "role": "Stagiaire Développeur Informatique",
+        "company": "Université de Parakou — Service de Gestion des Emplois du Temps et de la Programmation de l'Occupation des Infrastructures Pédagogiques",
+        "period": "Depuis Août 2026",
+        "desc": "Interviens en coordination avec l'équipe du service pour la maintenance et l'évolution des outils numériques, en assurant le suivi des demandes et la documentation des interventions."
+      },
+      {
+        "role": "Développeur Full Stack Stagiaire",
+        "company": "Light Innovation",
+        "period": "Avr. 2026 – Juil. 2026",
+        "desc": "Participé à l'analyse des besoins du projet MonBudget+, au suivi des tâches de développement, à la gestion des versions Git/GitHub, et développé des interfaces React connectées à des API REST Django et PostgreSQL."
+      }
+    ],
     "skills": "Compétences",
+    "skills_list": ["JavaScript", "TypeScript", "Python", "React", "Next.js", "React Native", "Django", "Django REST Framework", "Node.js", "NestJS", "PostgreSQL", "MongoDB", "Prisma", "Supabase", "Git", "GitHub"],
     "languages": "Langues",
+    "languages_list": [
+      { "lang": "Français", "level": "Courant" },
+      { "lang": "Anglais", "level": "Lecture technique" }
+    ],
+    "local_languages_label": "Langues locales",
+    "local_languages": "Fon, Goun, Adja, Mina, Tofin, Sawè",
     "interests": "Centres d'intérêt",
     "interests_list": ["Développement open source", "Lecture de blogs tech", "Jeux vidéo", "Sport (football)", "Voyages et découvertes culturelles"]
   },

@@ -15,6 +15,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'depannage-express',
+    title: 'DépannageExpress',
+    description: {
+      fr: 'Projet de fin d\'études mettant en relation conducteurs et mécaniciens. Coordination du projet en binôme, analyse des besoins des deux profils utilisateurs, géolocalisation et paiement sécurisé.',
+      en: 'Final-year project connecting drivers and mechanics. Paired-project coordination, needs analysis for both user profiles, geolocation and secure payment.',
+    },
+    image: '/images/projects/depannage-express.svg',
+    technologies: ['React Native', 'Django REST Framework', 'PostgreSQL'],
+    githubUrl: 'https://github.com/jujuprodfbp-creator',
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'monbudget-plus',
+    title: 'MonBudget+',
+    description: {
+      fr: 'Application de gestion budgétaire développée en équipe. Coordination de la répartition des tâches entre les membres et développement d\'interfaces React connectées à une API Django REST.',
+      en: 'Budget management app built as a team. Coordinated task distribution among team members and developed React interfaces connected to a Django REST API.',
+    },
+    image: '/images/projects/monbudget-plus.svg',
+    technologies: ['React', 'Django REST Framework', 'PostgreSQL'],
+    githubUrl: 'https://github.com/jujuprodfbp-creator',
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
     id: 'gestion-stock',
     title: 'App Gestion de Stock',
     description: {

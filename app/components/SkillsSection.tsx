@@ -6,25 +6,27 @@ const skillGroups = [
   {
     category: 'Frontend',
     skills: [
-      { name: 'Next.js', level: 85 },
       { name: 'React', level: 88 },
+      { name: 'Next.js', level: 85 },
+      { name: 'React Native', level: 75 },
       { name: 'TypeScript', level: 78 },
-      { name: 'Tailwind CSS', level: 90 },
     ],
   },
   {
     category: 'Backend',
     skills: [
+      { name: 'Django', level: 82 },
+      { name: 'Django REST Framework', level: 80 },
       { name: 'Node.js', level: 75 },
-      { name: 'Django', level: 80 },
-      { name: 'PostgreSQL', level: 70 },
-      { name: 'MongoDB', level: 72 },
+      { name: 'NestJS', level: 65 },
     ],
   },
   {
-    category: 'Outils',
+    category: 'Données & Outils',
     skills: [
-      { name: 'Git', level: 85 },
+      { name: 'PostgreSQL', level: 78 },
+      { name: 'MongoDB', level: 70 },
+      { name: 'Git / GitHub', level: 85 },
     ],
   },
 ];

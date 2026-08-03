@@ -8,6 +8,20 @@ import Image from 'next/image';
 export default function CVPage() {
   const t = useTranslations('cv');
   const interests = t.raw('interests_list') as string[];
+  const skillsList = t.raw('skills_list') as string[];
+  const languagesList = t.raw('languages_list') as { lang: string; level: string }[];
+  const educationList = t.raw('education_list') as {
+    degree: string;
+    school: string;
+    period: string;
+    desc: string;
+  }[];
+  const experienceList = t.raw('experience_list') as {
+    role: string;
+    company: string;
+    period: string;
+    desc: string;
+  }[];
 
   return (
     <section className="section-container">
@@ -66,7 +80,7 @@ export default function CVPage() {
               Tchehouenou
             </h2>
             <p className="text-sm text-brand-600 dark:text-brand-400 font-medium mb-3">
-              Developpeur Full Stack
+              {t('role')}
             </p>
             <div className="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
               <p>julius.tchehouenou@gmail.com</p>
@@ -85,13 +99,11 @@ export default function CVPage() {
               <Code size={16} className="text-brand-500" />
               {t('skills')}
             </h3>
-            {['Next.js', 'React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'PostgreSQL', 'MongoDB', 'Git', 'Django'].map(
-              (skill) => (
-                <span key={skill} className="tech-badge mr-1.5 mb-1.5 inline-block">
-                  {skill}
-                </span>
-              )
-            )}
+            {skillsList.map((skill) => (
+              <span key={skill} className="tech-badge mr-1.5 mb-1.5 inline-block">
+                {skill}
+              </span>
+            ))}
           </motion.div>
 
           <motion.div
@@ -104,10 +116,7 @@ export default function CVPage() {
               <Languages size={16} className="text-brand-500" />
               {t('languages')}
             </h3>
-            {[
-              { lang: 'Francais', level: 'Natif' },
-              { lang: 'Anglais', level: 'Intermediaire' },
-            ].map(({ lang, level }) => (
+            {languagesList.map(({ lang, level }) => (
               <div
                 key={lang}
                 className="flex justify-between items-center py-1.5 border-b border-zinc-100 dark:border-zinc-800 last:border-0"
@@ -116,6 +125,10 @@ export default function CVPage() {
                 <span className="text-xs font-mono text-zinc-400">{level}</span>
               </div>
             ))}
+            <div className="pt-3">
+              <p className="text-xs text-zinc-400 dark:text-zinc-500 mb-1">{t('local_languages_label')}</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-300">{t('local_languages')}</p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -161,20 +174,7 @@ export default function CVPage() {
               {t('education')}
             </h3>
             <div className="relative pl-4 border-l-2 border-brand-200 dark:border-brand-800 space-y-6">
-              {[
-                {
-                  degree: 'Licence en Informatique de Gestion',
-                  school: 'IUT · Universite de Parakou',
-                  period: '2026 - En cours',
-                  desc: "Formation specialisee en developpement web, bases de donnees, reseaux et gestion de systemes d'information.",
-                },
-                {
-                  degree: 'Baccalaureat Serie D',
-                  school: 'CEG1-Lokossa',
-                  period: '2023',
-                  desc: 'Baccalaureat scientifique mention Bien.',
-                },
-              ].map((edu) => (
+              {educationList.map((edu) => (
                 <div key={edu.degree} className="relative">
                   <div className="absolute -left-[21px] top-1 w-3 h-3 rounded-full bg-brand-500 border-2 border-white dark:border-zinc-900" />
                   <div className="flex flex-col sm:flex-row sm:justify-between mb-1">
@@ -199,20 +199,7 @@ export default function CVPage() {
               {t('experience')}
             </h3>
             <div className="relative pl-4 border-l-2 border-accent-200 dark:border-accent-800 space-y-6">
-              {[
-                {
-                  role: 'Developpeur Web Full Stack (Freelance)',
-                  company: 'Projets Personnels & Clients',
-                  period: '2023 - Present',
-                  desc: "Conception et developpement d'applications web completes. Stack principale : Next.js, TypeScript, Node.js, PostgreSQL.",
-                },
-                {
-                  role: 'Stage en Developpement Web',
-                  company: 'Entreprise locale · Parakou',
-                  period: 'Ete 2023',
-                  desc: 'Integration de maquettes Figma, developpement de fonctionnalites front-end avec React. Collaboration en equipe Agile.',
-                },
-              ].map((xp) => (
+              {experienceList.map((xp) => (
                 <div key={xp.role} className="relative">
                   <div className="absolute -left-[21px] top-1 w-3 h-3 rounded-full bg-accent-500 border-2 border-white dark:border-zinc-900" />
                   <div className="flex flex-col sm:flex-row sm:justify-between mb-1">

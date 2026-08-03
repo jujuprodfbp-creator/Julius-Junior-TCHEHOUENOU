@@ -9,9 +9,9 @@
   "home": {
     "greeting": "Hello, I'm",
     "name": "Julius Junior",
-    "role": "Full Stack Developer",
-    "status": "Computer Science Student · IUT of Parakou",
-    "bio": "Passionate about web development and emerging technologies, I design modern, high-performance, and accessible applications. Finishing my degree at the IUT of the University of Parakou, I combine academic rigor with hands-on practice to craft memorable digital experiences.",
+    "role": "Assistant IT Project Manager",
+    "status": "B.Sc. in Business Computing (Honours) · Intern at University of Parakou",
+    "bio": "Full Stack Developer with a dual technical and organizational skill set, gained by acting simultaneously as analyst-programmer and coordinator on my academic and professional projects. I analyze needs, plan tasks, and communicate with cross-functional teams to meet deadlines, aiming to put this dual expertise to work leading digital projects.",
     "cta_projects": "View my projects",
     "cta_cv": "Download my CV",
     "scroll": "Scroll down",
@@ -42,12 +42,48 @@
     "download": "Download PDF",
     "download_ats": "ATS version (no photo)",
     "download_photo": "Version with photo",
+    "role": "Assistant IT Project Manager",
     "profile": "Profile",
-    "profile_desc": "Passionate Full Stack Developer with a strong background in management information systems. Specialized in modern technologies like Next.js, React, and Node.js, I strive to create high-performance and accessible web applications. My approach combines technical rigor and creativity to deliver innovative solutions that meet user needs.",
+    "profile_desc": "Junior Full Stack Developer (Honours degree) with a dual technical and organizational skill set, gained by acting simultaneously as analyst-programmer and coordinator on my academic and professional projects. Used to analyzing needs, planning tasks, documenting deliverables, and communicating with cross-functional teams to meet deadlines. I'm aiming for an Assistant IT Project Manager role to put this dual expertise — development and coordination — to work leading digital projects.",
     "education": "Education",
+    "education_list": [
+      {
+        "degree": "Professional Bachelor's in Business Computing — Honours",
+        "school": "Institut Universitaire de Technologie (IUT) · University of Parakou",
+        "period": "2023 – 2026",
+        "desc": "Specialized training in web development, databases, networks and information systems management."
+      },
+      {
+        "degree": "High School Diploma, Science Track",
+        "school": "CEG1 Lokossa",
+        "period": "2023",
+        "desc": "Science baccalaureate."
+      }
+    ],
     "experience": "Experience",
+    "experience_list": [
+      {
+        "role": "IT Developer Intern",
+        "company": "University of Parakou — Timetabling & Facility Scheduling Department",
+        "period": "Since Aug. 2026",
+        "desc": "Coordinating with the department's team on the maintenance and evolution of digital tools, tracking requests and documenting interventions."
+      },
+      {
+        "role": "Full Stack Developer Intern",
+        "company": "Light Innovation",
+        "period": "Apr. 2026 – Jul. 2026",
+        "desc": "Contributed to needs analysis for the MonBudget+ project, tracked development tasks, managed Git/GitHub versioning, and built React interfaces connected to Django REST and PostgreSQL APIs."
+      }
+    ],
     "skills": "Skills",
+    "skills_list": ["JavaScript", "TypeScript", "Python", "React", "Next.js", "React Native", "Django", "Django REST Framework", "Node.js", "NestJS", "PostgreSQL", "MongoDB", "Prisma", "Supabase", "Git", "GitHub"],
     "languages": "Languages",
+    "languages_list": [
+      { "lang": "French", "level": "Fluent" },
+      { "lang": "English", "level": "Technical reading" }
+    ],
+    "local_languages_label": "Local languages",
+    "local_languages": "Fon, Goun, Adja, Mina, Tofin, Sawè",
     "interests": "Interests",
     "interests_list": ["Open source development", "Reading tech blogs", "Video games", "Sports (football)", "Travel and cultural discoveries"]
   },
