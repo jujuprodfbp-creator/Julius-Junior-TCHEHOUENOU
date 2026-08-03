@@ -6,7 +6,7 @@ export interface Project {
   description: { fr: string; en: string };
   image: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   isOnline: boolean;
   category: string;
@@ -14,6 +14,32 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 'salleup',
+    title: 'SalleUP',
+    description: {
+      fr: "Application PWA de gestion des salles, emplois du temps et séances pour l'Université de Parakou. Backend Django REST Framework avec PostgreSQL, JWT et tâches asynchrones Celery ; frontend React 19 + Vite installable en PWA. Tests automatisés et CI sur chaque push.",
+      en: "PWA for managing rooms, timetables and class sessions at the University of Parakou. Django REST Framework backend with PostgreSQL, JWT and Celery background tasks; installable React 19 + Vite PWA frontend. Automated tests and CI on every push.",
+    },
+    image: '/images/projects/salleup.svg',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Django REST Framework', 'PostgreSQL', 'Celery'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'stopscam',
+    title: 'StopScam',
+    description: {
+      fr: 'Plateforme anti-arnaque nationale développée en équipe : signalement de liens, numéros et profils frauduleux, historique et statistiques de modération. Backend Django REST Framework (comptes, signalements, commentaires) et frontend React + Vite.',
+      en: 'National anti-scam platform built with a team: reporting fraudulent links, phone numbers and profiles, with history and moderation statistics. Django REST Framework backend (accounts, reports, comments) and React + Vite frontend.',
+    },
+    image: '/images/projects/stopscam.svg',
+    technologies: ['React', 'Vite', 'Django REST Framework', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
   {
     id: 'depannage-express',
     title: 'DépannageExpress',
