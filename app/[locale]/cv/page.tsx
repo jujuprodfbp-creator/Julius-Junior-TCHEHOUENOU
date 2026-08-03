@@ -14,14 +14,32 @@ export default function CVPage() {
       <div className="text-center mb-12 fade-up">
         <h1 className="section-title">{t('title')}</h1>
         <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-6">{t('subtitle')}</p>
-        <a
-          href="/images/cv.pdf"
-          download="CV_Julius_Junior_Tchehouenou.pdf"
-          className="btn-primary inline-flex"
-        >
-          <Download size={18} />
-          {t('download')}
-        </a>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="/images/cv.pdf"
+            download="CV_Julius_Junior_Tchehouenou.pdf"
+            className="btn-primary inline-flex"
+          >
+            <Download size={18} />
+            {t('download')}
+          </a>
+          <a
+            href="/cv/cv-chef-de-projet.pdf"
+            download="CV_Julius_Junior_Tchehouenou_ATS.pdf"
+            className="btn-secondary inline-flex"
+          >
+            <Download size={16} />
+            {t('download_ats')}
+          </a>
+          <a
+            href="/cv/cv-chef-de-projet-photo.pdf"
+            download="CV_Julius_Junior_Tchehouenou_Photo.pdf"
+            className="btn-secondary inline-flex"
+          >
+            <Download size={16} />
+            {t('download_photo')}
+          </a>
+        </div>
         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-accent-500 rounded-full mx-auto mt-6" />
       </div>
 

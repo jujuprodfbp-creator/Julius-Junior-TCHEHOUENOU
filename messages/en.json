@@ -40,6 +40,8 @@
     "title": "Curriculum Vitae",
     "subtitle": "My academic and professional background",
     "download": "Download PDF",
+    "download_ats": "ATS version (no photo)",
+    "download_photo": "Version with photo",
     "profile": "Profile",
     "profile_desc": "Passionate Full Stack Developer with a strong background in management information systems. Specialized in modern technologies like Next.js, React, and Node.js, I strive to create high-performance and accessible web applications. My approach combines technical rigor and creativity to deliver innovative solutions that meet user needs.",
     "education": "Education",

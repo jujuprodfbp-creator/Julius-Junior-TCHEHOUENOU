@@ -46,7 +46,7 @@ export function ContactClient() {
       return;
     }
 
-    if (missingConfig.length > 0) {
+    if (!serviceId || !templateId || !publicKey) {
       setErrorMessage(
         `Le formulaire de contact n’est pas configuré correctement. Variables manquantes: ${missingConfig.join(', ')}.`
       );
@@ -101,7 +101,7 @@ export function ContactClient() {
 
             {[
               { icon: Mail, label: 'Email', value: 'julius.tchehouenou@gmail.com', href: 'mailto:julius.tchehouenou@gmail.com' },
-              { icon: Phone, label: 'Téléphone', value: '+229 01 61 13 32 24', href: 'tel:+22901611332 24' },
+              { icon: Phone, label: 'Téléphone', value: '+229 01 61 13 32 24', href: 'tel:+2290161133224' },
             ].map(({ icon: Icon, label, value, href }) => (
               <a key={label} href={href} className="flex items-start gap-4 group">
                 <div className="p-2.5 rounded-xl bg-brand-50 dark:bg-brand-950/30 text-brand-600 dark:text-brand-400 group-hover:bg-brand-100 dark:group-hover:bg-brand-900/50 transition-colors mt-0.5">

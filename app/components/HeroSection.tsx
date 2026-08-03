@@ -93,7 +93,7 @@ export function HeroSection() {
                 <FolderOpen size={18} />
                 {t('cta_projects')}
               </Link>
-              <a href="/cv.pdf" download className="btn-secondary">
+              <a href="/images/cv.pdf" download className="btn-secondary">
                 <Download size={18} />
                 {t('cta_cv')}
               </a>

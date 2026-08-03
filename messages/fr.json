@@ -40,6 +40,8 @@
     "title": "Curriculum Vitae",
     "subtitle": "Mon parcours académique et professionnel",
     "download": "Télécharger le PDF",
+    "download_ats": "Version ATS (sans photo)",
+    "download_photo": "Version avec photo",
     "profile": "Profil",
     "profile_desc": "Développeur Full Stack passionné avec une solide formation en informatique de gestion. Spécialisé dans les technologies modernes comme Next.js, React et Node.js, je m'efforce de créer des applications web performantes et accessibles. Mon approche combine rigueur technique et créativité pour livrer des solutions innovantes répondant aux besoins des utilisateurs.",
     "education": "Formation",

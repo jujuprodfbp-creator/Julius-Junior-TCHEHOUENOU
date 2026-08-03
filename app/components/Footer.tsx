@@ -86,7 +86,7 @@ export function Footer() {
                 julius.tchehouenou@gmail.com
               </a>
               <a
-                href="tel:+22901611332 24"
+                href="tel:+2290161133224"
                 className="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-brand-500 transition-colors"
               >
                 <Phone size={14} />
