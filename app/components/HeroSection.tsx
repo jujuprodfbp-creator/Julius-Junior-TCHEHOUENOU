@@ -13,6 +13,7 @@ import {
   FolderOpen,
 } from 'lucide-react';
 import { Link } from '@/i18n';
+import { projects } from '@/data/projects';
 
 const socialLinks = [
   {
@@ -147,7 +148,7 @@ export function HeroSection() {
 
         <div className="grid grid-cols-3 gap-6 mt-20 max-w-lg mx-auto lg:mx-0 fade-up" style={{ animationDelay: '0.6s' }}>
           {[
-            { value: '6+', label: t('stats_projects') },
+            { value: `${projects.length}+`, label: t('stats_projects') },
             { value: '18+', label: t('stats_months') },
             { value: '12+', label: t('stats_tech') },
           ].map(({ value, label }) => (
