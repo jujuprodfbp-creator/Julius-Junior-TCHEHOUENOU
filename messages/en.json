@@ -76,7 +76,7 @@
       }
     ],
     "skills": "Skills",
-    "skills_list": ["JavaScript", "TypeScript", "Python", "React", "Next.js", "React Native", "Django", "Django REST Framework", "Node.js", "NestJS", "PostgreSQL", "MongoDB", "Prisma", "Supabase", "Git", "GitHub"],
+    "skills_list": ["JavaScript", "TypeScript", "Python", "React", "Next.js", "React Native", "Django", "Django REST Framework", "Node.js", "NestJS", "PostgreSQL", "MongoDB", "Prisma", "Supabase", "Git", "GitHub", "Prompt Engineering", "LLM APIs (OpenAI, Anthropic)"],
     "languages": "Languages",
     "languages_list": [
       { "lang": "French", "level": "Fluent" },

@@ -29,6 +29,13 @@ const skillGroups = [
       { name: 'Git / GitHub', level: 85 },
     ],
   },
+  {
+    category: 'IA',
+    skills: [
+      { name: 'Prompt Engineering', level: 80 },
+      { name: 'APIs LLM (OpenAI, Anthropic)', level: 72 },
+    ],
+  },
 ];
 
 export function SkillsSection() {
@@ -42,7 +49,7 @@ export function SkillsSection() {
           <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-accent-500 rounded-full mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillGroups.map((group, groupIdx) => (
             <div
               key={group.category}
