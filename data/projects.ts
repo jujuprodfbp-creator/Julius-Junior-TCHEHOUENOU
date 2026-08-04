@@ -15,6 +15,58 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'blooddonor',
+    title: 'BloodDonor',
+    description: {
+      fr: 'Plateforme communautaire de mise en relation entre donneurs et receveurs de sang : inscription des donneurs, recherche par compatibilité médicale réelle (ABO/Rh) et publication de demandes de don urgentes.',
+      en: 'Community platform connecting blood donors and recipients: donor registration, search based on real ABO/Rh medical compatibility rules, and posting of urgent donation requests.',
+    },
+    image: '/images/projects/blooddonor.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'smarttontine',
+    title: 'SmartTontine',
+    description: {
+      fr: 'Application de gestion numérique de tontines (association rotative d\'épargne ouest-africaine) : suivi des cotisations, ordre de rotation des membres et versements, le tout en temps réel.',
+      en: 'Digital manager for tontines — the West African rotating savings and credit association practice — tracking member contributions, payout rotation order, and disbursements in real time.',
+    },
+    image: '/images/projects/smarttontine.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'carpool',
+    title: 'CarPool',
+    description: {
+      fr: 'Application de covoiturage qui connecte conducteurs et passagers pour des trajets partagés entre les grandes villes du Bénin, avec recherche de trajets, réservation en temps réel et protection contre la surréservation.',
+      en: 'Ride-sharing app that connects drivers and passengers for shared trips between major Beninese cities, featuring trip search, real-time seat booking, and server-side over-booking prevention.',
+    },
+    image: '/images/projects/carpool.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'medreminder',
+    title: 'MedReminder',
+    description: {
+      fr: 'Application de suivi de traitement médicamenteux : programmation des médicaments, suivi des prises du jour en un clic, et visualisation de l\'adhérence au traitement via un historique sur 14 jours et un calcul de série de jours respectés.',
+      en: 'Medication adherence tracker that lets users schedule their medications, log daily doses with a single click, and visualize treatment adherence through a 14-day history grid and a consecutive-day streak.',
+    },
+    image: '/images/projects/medreminder.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
     id: 'pdfsummarizer',
     title: 'PDFSummarizer',
     description: {
