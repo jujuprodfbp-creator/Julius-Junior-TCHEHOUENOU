@@ -15,6 +15,58 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'pdfsummarizer',
+    title: 'PDFSummarizer',
+    description: {
+      fr: 'Application qui résume automatiquement un PDF grâce à l\'IA : le texte est extrait côté serveur puis envoyé à Claude (Anthropic) pour générer un résumé et des points clés, téléchargeables en .txt.',
+      en: 'App that automatically summarizes any PDF using AI: text is extracted server-side and sent to Claude (Anthropic) to produce a TL;DR and key bullet points, downloadable as a .txt file.',
+    },
+    image: '/images/projects/pdfsummarizer.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Anthropic API', 'pdf-parse'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'spendtracker',
+    title: 'SpendTracker',
+    description: {
+      fr: 'Application de suivi de dépenses personnelles : ajout, modification et suppression de dépenses, avec un tableau de bord affichant le total dépensé et la répartition par catégorie sous forme de graphique.',
+      en: 'Personal expense-tracking app for adding, editing, and deleting expenses, featuring a dashboard with total spending and a category breakdown chart.',
+    },
+    image: '/images/projects/spendtracker.svg',
+    technologies: ['Next.js', 'TypeScript', 'Prisma', 'SQLite', 'Recharts'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'quizrewards',
+    title: 'QuizRewards',
+    description: {
+      fr: 'Application de quiz à choix multiples où les joueurs répondent à des séries de questions, gagnent des points cumulables selon leurs bonnes réponses, et suivent leur progression sur un classement général.',
+      en: 'Multiple-choice quiz app where players answer question sets, earn points that accumulate based on correct answers, and track their standing on a real-time leaderboard.',
+    },
+    image: '/images/projects/quizrewards.svg',
+    technologies: ['Next.js', 'TypeScript', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'cvgenerator',
+    title: 'CVGenerator',
+    description: {
+      fr: 'Générateur de CV en ligne : remplissez un formulaire (informations personnelles, formation, expérience, compétences), visualisez un aperçu en temps réel, puis exportez votre CV en PDF en un clic.',
+      en: 'Online resume builder: fill in a form (personal info, education, experience, skills), see a live preview update in real time, and export your CV as a polished PDF in one click.',
+    },
+    image: '/images/projects/cvgenerator.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', '@react-pdf/renderer'],
+    isOnline: false,
+    category: 'frontend',
+    featured: true,
+  },
+  {
     id: 'salleup',
     title: 'SalleUP',
     description: {
