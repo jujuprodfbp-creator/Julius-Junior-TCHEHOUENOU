@@ -15,6 +15,58 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'microcredit',
+    title: 'MicroCredit',
+    description: {
+      fr: 'Plateforme de gestion de microcrédits permettant aux agents de crédit d\'enregistrer des emprunteurs, instruire des demandes de prêt, les approuver ou rejeter, et suivre les échéanciers de remboursement avec un tableau de bord des montants prêtés, collectés et en retard.',
+      en: 'Microfinance loan management platform where loan officers register borrowers, review and approve/reject loan applications, and track auto-generated repayment schedules through a dashboard of amounts lent, collected, and overdue.',
+    },
+    image: '/images/projects/microcredit.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'pharmacypro',
+    title: 'PharmacyPro',
+    description: {
+      fr: 'Application de gestion de stock pour pharmacie : suivi des médicaments, alertes automatiques de stock bas et de péremption, et enregistrement des ventes avec décrémentation sécurisée du stock en temps réel.',
+      en: 'Pharmacy inventory management app that tracks medications, raises automatic low-stock and expiry alerts, and records sales with real-time, transaction-safe stock decrementing.',
+    },
+    image: '/images/projects/pharmacypro.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'mentorhub',
+    title: 'MentorHub',
+    description: {
+      fr: 'Plateforme de mise en relation mentors/mentees : annuaire filtrable par expertise, demandes de session en temps réel, et boîte de réception mentor pour accepter ou décliner les demandes.',
+      en: 'Mentorship-matching platform where mentees browse mentors by expertise, request sessions, and mentors manage incoming requests through a real accept/decline inbox.',
+    },
+    image: '/images/projects/mentorhub.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
+    id: 'deliveryhub',
+    title: 'DeliveryHub',
+    description: {
+      fr: 'Plateforme de suivi de livraisons de colis : les expéditeurs créent des commandes avec un code de suivi unique, les dispatchers assignent des coursiers et font progresser chaque livraison à travers son cycle de vie, et n\'importe qui peut suivre son colis publiquement grâce à une frise chronologique claire, sans compte requis.',
+      en: 'Package delivery tracking platform: senders create orders with a unique tracking code, dispatchers assign couriers and advance each delivery through its lifecycle, and anyone can publicly track a package via a clear visual timeline — no account needed.',
+    },
+    image: '/images/projects/deliveryhub.svg',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
     id: 'blooddonor',
     title: 'BloodDonor',
     description: {
