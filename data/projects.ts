@@ -132,6 +132,12 @@ export const projects: Project[] = [
       en: 'Medication adherence tracker that lets users schedule their medications, log daily doses with a single click, and visualize treatment adherence through a 14-day history grid and a consecutive-day streak.',
     },
     image: '/images/projects/medreminder.svg',
+    screenshots: [
+      '/images/projects/shots/medreminder/1-today-dashboard.png',
+      '/images/projects/shots/medreminder/2-dose-marked-taken.png',
+      '/images/projects/shots/medreminder/3-medications-list.png',
+      '/images/projects/shots/medreminder/4-adherence-history.png',
+    ],
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
     isOnline: false,
     category: 'fullstack',
