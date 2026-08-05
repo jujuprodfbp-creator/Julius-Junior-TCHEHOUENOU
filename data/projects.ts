@@ -5,6 +5,7 @@ export interface Project {
   title: string;
   description: { fr: string; en: string };
   image: string;
+  screenshots?: string[];
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -126,6 +127,12 @@ export const projects: Project[] = [
       en: 'App that automatically summarizes any PDF using AI: text is extracted server-side and sent to Claude (Anthropic) to produce a TL;DR and key bullet points, downloadable as a .txt file.',
     },
     image: '/images/projects/pdfsummarizer.svg',
+    screenshots: [
+      '/images/projects/shots/pdfsummarizer/1-idle-upload.png',
+      '/images/projects/shots/pdfsummarizer/2-drag-over.png',
+      '/images/projects/shots/pdfsummarizer/3-error-missing-key.png',
+      '/images/projects/shots/pdfsummarizer/4-mobile-error.png',
+    ],
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Anthropic API', 'pdf-parse'],
     isOnline: false,
     category: 'fullstack',
@@ -139,6 +146,12 @@ export const projects: Project[] = [
       en: 'Personal expense-tracking app for adding, editing, and deleting expenses, featuring a dashboard with total spending and a category breakdown chart.',
     },
     image: '/images/projects/spendtracker.svg',
+    screenshots: [
+      '/images/projects/shots/spendtracker/1-dashboard.png',
+      '/images/projects/shots/spendtracker/2-add-expense-form.png',
+      '/images/projects/shots/spendtracker/3-edit-expense.png',
+      '/images/projects/shots/spendtracker/4-previous-month.png',
+    ],
     technologies: ['Next.js', 'TypeScript', 'Prisma', 'SQLite', 'Recharts'],
     isOnline: false,
     category: 'fullstack',
@@ -152,6 +165,12 @@ export const projects: Project[] = [
       en: 'Multiple-choice quiz app where players answer question sets, earn points that accumulate based on correct answers, and track their standing on a real-time leaderboard.',
     },
     image: '/images/projects/quizrewards.svg',
+    screenshots: [
+      '/images/projects/shots/quizrewards/1-home-quiz-selection.png',
+      '/images/projects/shots/quizrewards/2-quiz-question.png',
+      '/images/projects/shots/quizrewards/3-results-score.png',
+      '/images/projects/shots/quizrewards/4-leaderboard.png',
+    ],
     technologies: ['Next.js', 'TypeScript', 'Prisma', 'SQLite'],
     isOnline: false,
     category: 'fullstack',

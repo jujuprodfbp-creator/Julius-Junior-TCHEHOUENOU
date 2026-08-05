@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -102,13 +102,7 @@ function ProjectGrid({
             className="group glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-brand-500/10 transition-all duration-300 hover:-translate-y-1"
           >
             <div className="relative h-48 bg-gradient-to-br from-brand-900 to-accent-900 overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
-                sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-              />
+              <ProjectMedia project={project} />
 
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/85 via-zinc-950/40 to-transparent" />
 
@@ -184,5 +178,46 @@ function ProjectGrid({
         ))}
       </AnimatePresence>
     </motion.div>
+  );
+}
+
+function ProjectMedia({ project }: { project: Project }) {
+  const images = project.screenshots && project.screenshots.length > 0 ? project.screenshots : [project.image];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % images.length), 2600);
+    return () => clearInterval(id);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((src, i) => (
+        <Image
+          key={src}
+          src={src}
+          alt={project.title}
+          fill
+          priority={i === 0}
+          className={`object-cover object-top transition-opacity duration-700 group-hover:scale-105 ${
+            i === index ? 'opacity-80' : 'opacity-0'
+          }`}
+          sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+        />
+      ))}
+      {images.length > 1 && (
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === index ? 'w-4 bg-white' : 'w-1.5 bg-white/40'
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
