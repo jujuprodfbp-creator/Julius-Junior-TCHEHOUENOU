@@ -42,6 +42,12 @@ export const projects: Project[] = [
       en: 'Pharmacy inventory management app that tracks medications, raises automatic low-stock and expiry alerts, and records sales with real-time, transaction-safe stock decrementing.',
     },
     image: '/images/projects/pharmacypro.svg',
+    screenshots: [
+      '/images/projects/shots/pharmacypro/1-dashboard.png',
+      '/images/projects/shots/pharmacypro/2-inventaire.png',
+      '/images/projects/shots/pharmacypro/3-nouvelle-vente.png',
+      '/images/projects/shots/pharmacypro/4-nouveau-medicament.png',
+    ],
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
     isOnline: false,
     category: 'fullstack',
