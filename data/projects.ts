@@ -23,6 +23,12 @@ export const projects: Project[] = [
       en: 'Microfinance loan management platform where loan officers register borrowers, review and approve/reject loan applications, and track auto-generated repayment schedules through a dashboard of amounts lent, collected, and overdue.',
     },
     image: '/images/projects/microcredit.svg',
+    screenshots: [
+      '/images/projects/shots/microcredit/1-dashboard.png',
+      '/images/projects/shots/microcredit/2-approvals.png',
+      '/images/projects/shots/microcredit/3-loan-detail.png',
+      '/images/projects/shots/microcredit/4-new-loan-form.png',
+    ],
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'SQLite'],
     isOnline: false,
     category: 'fullstack',
