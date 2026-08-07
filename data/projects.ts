@@ -297,6 +297,12 @@ export const projects: Project[] = [
       en: 'Budget management app built as a team. Coordinated task distribution among team members and developed React interfaces connected to a Django REST API.',
     },
     image: '/images/projects/monbudget-plus.svg',
+    screenshots: [
+      '/images/projects/shots/monbudgetplus/01-dashboard.png',
+      '/images/projects/shots/monbudgetplus/02-expenses-form.png',
+      '/images/projects/shots/monbudgetplus/03-savings.png',
+      '/images/projects/shots/monbudgetplus/04-analysis.png',
+    ],
     technologies: ['React', 'Django REST Framework', 'PostgreSQL'],
     githubUrl: 'https://github.com/jujuprodfbp-creator',
     isOnline: false,
