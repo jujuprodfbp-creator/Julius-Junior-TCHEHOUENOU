@@ -397,6 +397,12 @@ export const projects: Project[] = [
       en: 'Platform for finding and booking local artisans, with reviews. NestJS backend and Next.js frontend.',
     },
     image: '/images/projects/artisan360.svg',
+    screenshots: [
+      '/images/projects/shots/artisan360/01-home.png',
+      '/images/projects/shots/artisan360/02-search.png',
+      '/images/projects/shots/artisan360/03-profile.png',
+      '/images/projects/shots/artisan360/04-register.png',
+    ],
     technologies: ['Next.js', 'React', 'NestJS', 'TypeScript'],
     isOnline: false,
     category: 'fullstack',
