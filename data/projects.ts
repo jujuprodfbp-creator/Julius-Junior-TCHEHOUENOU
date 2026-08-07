@@ -264,6 +264,12 @@ export const projects: Project[] = [
       en: 'National anti-scam platform built with a team: reporting fraudulent links, phone numbers and profiles, with history and moderation statistics. Django REST Framework backend (accounts, reports, comments) and React + Vite frontend.',
     },
     image: '/images/projects/stopscam.svg',
+    screenshots: [
+      '/images/projects/shots/stopscam/01-home.png',
+      '/images/projects/shots/stopscam/02-vigilance.png',
+      '/images/projects/shots/stopscam/03-signaler.png',
+      '/images/projects/shots/stopscam/04-admin-moderation.png',
+    ],
     technologies: ['React', 'Vite', 'Django REST Framework', 'SQLite'],
     isOnline: false,
     category: 'fullstack',
