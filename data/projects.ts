@@ -16,6 +16,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'maboutique',
+    title: 'MaBoutique',
+    description: {
+      fr: 'Boutique en ligne complète pour le marché béninois : catalogue multi-catégories avec recherche et filtres, panier, paiement Mobile Money (MTN, Moov) et carte bancaire via FedaPay, et notification WhatsApp automatique au vendeur et au client à chaque commande payée. Espace admin avec tableau de bord des ventes, gestion des produits, du stock et des commandes.',
+      en: 'Full-featured online store for the Beninese market: multi-category catalog with search and filters, cart, Mobile Money (MTN, Moov) and card payments through FedaPay, and automatic WhatsApp notifications to both seller and customer for every paid order. Admin area with a sales dashboard and product, stock and order management.',
+    },
+    image: '/images/projects/maboutique.svg',
+    screenshots: [
+      '/images/projects/shots/ecommerce/01-accueil.png',
+      '/images/projects/shots/ecommerce/02-fiche-produit.png',
+      '/images/projects/shots/ecommerce/03-commande.png',
+      '/images/projects/shots/ecommerce/04-admin-tableau-de-bord.png',
+    ],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'FedaPay', 'WhatsApp Cloud API'],
+    isOnline: false,
+    category: 'fullstack',
+    featured: true,
+  },
+  {
     id: 'microcredit',
     title: 'MicroCredit',
     description: {
